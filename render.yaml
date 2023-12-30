@@ -1,5 +1,0 @@
-services:
-  - name: web
-    buildCommand: pip install -r requirements.txt
-    startCommand: python api_file.py
-
