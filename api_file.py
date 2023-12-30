@@ -8,7 +8,7 @@ data = {
 'sex': 'male'
 }
 
-@app.route('/backend-test', methods=['GET', 'POST']) # using the .route decocator to create route
+@app.route('/api', methods=['GET', 'POST']) # using the .route decocator to create route
 def about_route():
     """ view function that handles both GET
     and POST requests
