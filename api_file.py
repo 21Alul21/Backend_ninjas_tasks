@@ -8,18 +8,17 @@ data = {
 'sex': 'male'
 }
 
-@app.route('/api/about', methods=['GET']) # using the .route decocator to create route
+@app.route('/backend-test', methods=['GET', 'POST']) # using the .route decocator to create route
 def about_route():
+    """ view function that handles both GET
+    and POST requests
+    """
     if request.method == 'GET':
-        return jsonify(data)
-   
-
-
-@app.route('/api/update', methods=['GET', 'POST'])
-def update_data():
+        return jsonify(data), 200
     if request.method == 'POST':
-        new_data = request.get_json()
-        return jsonify(new_data)
+       new_data = request.get_json()
+       return jsonify(new_data), 201
+   
 
 if __name__ == '__main__':
     app.run()
